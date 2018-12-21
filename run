@@ -1,0 +1,2 @@
+#!/bin/sh
+hass -c $(dirname $0) --open-ui
