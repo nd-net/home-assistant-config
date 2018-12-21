@@ -88,6 +88,8 @@ homekit: !include homekit.yaml
 zwave:
   usb_path: /dev/ttyUSB0
 
+gardena: !include gardena.yaml
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
