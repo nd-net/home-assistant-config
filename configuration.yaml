@@ -14,7 +14,7 @@ homeassistant:
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -66,6 +66,10 @@ tts:
 cloud:
 
 homekit: !include homekit.yaml
+
+# Z-Wave is configured using "Integrations"
+#zwave:
+#  usb_path: /dev/ttyUSB0
 
 group: !include groups.yaml
 automation: !include automations.yaml
