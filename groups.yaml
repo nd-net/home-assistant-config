@@ -1,0 +1,12 @@
+default_view:
+  view: true
+  icon: mdi:home
+  entities:
+    - group.living_room
+living_room:
+  name: Wohnzimmer
+  entities:
+    - binary_sensor.aeotec_dsb05_multisensor_sensor
+    - sensor.aeotec_dsb05_multisensor_luminance
+    - sensor.aeotec_dsb05_multisensor_relative_humidity
+    - sensor.aeotec_dsb05_multisensor_temperature
