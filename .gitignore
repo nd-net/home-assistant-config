@@ -1,3 +1,18 @@
-/.*
-/home-assistant_v2.db
-*.log
+*
+
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+
+# Ignore Mac SMB files
+._*
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
