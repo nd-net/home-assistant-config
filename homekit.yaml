@@ -1,0 +1,5 @@
+auto_start: False  # Disable autostart because of Z-Wave discovery
+filter:
+  exclude_domains:
+    # Remove all automations by default (similar to Hide from UI)
+    - automation
