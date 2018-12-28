@@ -1,0 +1,12 @@
+sensor.aeotec_dsb05_multisensor_luminance:
+  device_class: illuminance
+sensor.aeotec_dsb05_multisensor_relative_humidity:
+  device_class: humidity
+sensor.aeotec_dsb05_multisensor_temperature:
+  device_class: temperature
+binary_sensor.aeotec_dsb05_multisensor_sensor:
+  battery_level: '90'
+  device_class: occupancy
+group.all_automations: {}
+automation.start_homekit:
+  homebridge_hidden: true
