@@ -31,7 +31,7 @@ config:
 # the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
+# updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
@@ -42,6 +42,9 @@ discovery:
 conversation:
 
 # Enables support for tracking state changes over time
+recorder:
+  purge_keep_days: 60
+
 history:
 
 # View all events in a logbook
@@ -54,9 +57,7 @@ map:
 sun:
 
 # Sensors
-sensor:
-  # Weather prediction
-  - platform: yr
+sensor: !include sensors.yaml
 
 # Text to speech
 tts:
@@ -68,8 +69,8 @@ cloud:
 homekit: !include homekit.yaml
 
 # Z-Wave is configured using "Integrations"
-#zwave:
-#  usb_path: /dev/ttyUSB0
+zwave:
+  usb_path: /dev/ttyUSB0
 
 group: !include groups.yaml
 automation: !include automations.yaml

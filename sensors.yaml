@@ -1,0 +1,17 @@
+# Track the moon
+- platform: moon
+
+# Weather prediction
+- platform: zamg
+  station_id: 11010
+  name: hoersching
+  monitored_conditions:
+    - temperature
+    - humidity
+    - pressure
+    - wind_speed
+    - wind_bearing
+    - wind_max_speed
+    - sun_last_hour
+    - precipitation
+    - dewpoint
