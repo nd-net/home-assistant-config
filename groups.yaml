@@ -33,6 +33,7 @@ internet:
   name: Internet
   entities:
     - sensor.fritz_netmonitor
+    - binary_sensor.fritz_is_connected
     - sensor.fritz_external_ipv4
     - sensor.fritz_max_byte_rate_up
     - sensor.fritz_max_byte_rate_down

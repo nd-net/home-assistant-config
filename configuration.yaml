@@ -58,6 +58,7 @@ sun:
 
 # Sensors
 sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
 
 # Text to speech
 tts:

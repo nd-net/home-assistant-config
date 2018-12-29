@@ -41,9 +41,11 @@ sensor.hoersching_dewpoint:
   friendly_name: Taupunkt
 sensor.fritz_netmonitor:
   friendly_name: Internet
+binary_sensor.fritz_is_connected:
+  friendly_name: Online
 sensor.fritz_external_ipv4:
   friendly_name: IPv4
-  icon: mdi:cloud
+  icon: mdi:battlenet
 sensor.fritz_max_byte_rate_up:
   friendly_name: Bandbreite Upload
   icon: mdi:upload-network
