@@ -15,3 +15,24 @@
     - sun_last_hour
     - precipitation
     - dewpoint
+
+# Get network statistics from the Friz!Box
+- platform: fritzbox_netmonitor
+
+- platform: template
+  sensors:
+    fritz_external_ipv4:
+      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'external_ip') }}"
+    fritz_max_byte_rate_up:
+      unit_of_measurement: MBit/s
+      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'max_byte_rate_up')|float / 1000000 * 8 }}"
+    fritz_max_byte_rate_down:
+      unit_of_measurement: MBit/s
+      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'max_byte_rate_down')|float / 1000000 * 8 }}"
+    fritz_transmission_rate_up:
+      unit_of_measurement: MBit/s
+      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'transmission_rate_up')|float / 1000000 * 8 }}"
+    fritz_transmission_rate_down:
+      unit_of_measurement: MBit/s
+      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'transmission_rate_down')|float / 1000000 * 8 }}"
+
