@@ -1,12 +1,62 @@
-sensor.aeotec_dsb05_multisensor_luminance:
-  device_class: illuminance
-sensor.aeotec_dsb05_multisensor_relative_humidity:
-  device_class: humidity
-sensor.aeotec_dsb05_multisensor_temperature:
-  device_class: temperature
-binary_sensor.aeotec_dsb05_multisensor_sensor:
-  battery_level: '90'
-  device_class: occupancy
-group.all_automations: {}
 automation.start_homekit:
   homebridge_hidden: true
+sensor.aeotec_dsb05_multisensor_luminance:
+  device_class: illuminance
+  friendly_name: Helligkeit
+sensor.aeotec_dsb05_multisensor_relative_humidity:
+  device_class: humidity
+  friendly_name: Luftfeuchtigkeit
+sensor.aeotec_dsb05_multisensor_temperature:
+  device_class: temperature
+  friendly_name: Temperatur
+binary_sensor.aeotec_dsb05_multisensor_sensor:
+  device_class: occupancy
+  friendly_name: Anwesenheit
+sensor.hoersching_temperature:
+  device_class: temperature
+  friendly_name: Temperatur
+sensor.hoersching_humidity:
+  friendly_name: Luftfeuchtigkeit
+  icon: mdi:water-percent
+sensor.hoersching_pressure:
+  friendly_name: Luftdruck
+  icon: mdi:gauge
+sensor.hoersching_wind_speed:
+  friendly_name: Windgeschwindigkeit
+  icon: mdi:weather-windy-variant
+sensor.hoersching_wind_bearing:
+  friendly_name: Windrichtung
+  icon: mdi:compass-outline
+sensor.hoersching_wind_max_speed:
+  friendly_name: Maximale Windgeschwindigkeit
+  icon: mdi:weather-windy
+sensor.hoersching_sun_last_hour:
+  friendly_name: Sonnenschein
+  icon: mdi:weather-partlycloudy
+sensor.hoersching_precipitation:
+  friendly_name: Niederschlag
+  icon: mdi:weather-snowy-rainy
+  unit_of_measurement: mm
+sensor.hoersching_dewpoint:
+  friendly_name: Taupunkt
+sensor.fritz_netmonitor:
+  friendly_name: Internet
+sensor.fritz_external_ipv4:
+  friendly_name: IPv4
+  icon: mdi:cloud
+sensor.fritz_max_byte_rate_up:
+  friendly_name: Bandbreite Upload
+  icon: mdi:upload-network
+sensor.fritz_max_byte_rate_down:
+  friendly_name: Bandbreite Download
+  icon: mdi:download-network
+sensor.fritz_transmission_rate_up:
+  friendly_name: Upload
+  icon: mdi:upload
+sensor.fritz_transmission_rate_down:
+  friendly_name: Download
+  icon: mdi:download
+sensor.moon:
+  friendly_name: Mond
+sun.sun:
+  friendly_name: Sonne
