@@ -1,5 +1,9 @@
 auto_start: False  # Disable autostart because of Z-Wave discovery
 filter:
-  exclude_domains:
-    # Remove all automations by default (similar to Hide from UI)
-    - automation
+  include_entities:
+    - binary_sensor.aeotec_dsb05_multisensor_sensor
+    - sensor.aeotec_dsb05_multisensor_luminance
+    - sensor.aeotec_dsb05_multisensor_relative_humidity
+    - sensor.aeotec_dsb05_multisensor_temperature
+    
+    - sensor.fritz_netmonitor
