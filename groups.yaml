@@ -1,12 +1,47 @@
-default_view:
-  view: true
-  icon: mdi:home
+# default_view:
+#   view: true
+#   icon: mdi:home
+#   entities:
+#     - group.living_room
+
+weather:
+  name: Wetter
+  control: hidden
   entities:
-    - group.living_room
+    - sun.sun
+    - sensor.moon
+    - sensor.hoersching_temperature
+    - sensor.hoersching_humidity
+    - sensor.hoersching_pressure
+    - sensor.hoersching_wind_speed
+    - sensor.hoersching_wind_bearing
+    - sensor.hoersching_wind_max_speed
+    - sensor.hoersching_sun_last_hour
+    - sensor.hoersching_precipitation
+    - sensor.hoersching_dewpoint
+    
 living_room:
   name: Wohnzimmer
+  control: hidden
   entities:
     - binary_sensor.aeotec_dsb05_multisensor_sensor
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
     - sensor.aeotec_dsb05_multisensor_temperature
+
+internet:
+  name: Internet
+  entities:
+    - sensor.fritz_netmonitor
+    - sensor.fritz_external_ipv4
+    - sensor.fritz_max_byte_rate_up
+    - sensor.fritz_max_byte_rate_down
+    - sensor.fritz_transmission_rate_up
+    - sensor.fritz_transmission_rate_down
+
+automation_view:
+  name: Automation
+  view: true
+  entities:
+    - group.all_automations
+    - group.all_scripts
