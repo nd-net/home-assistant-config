@@ -1,9 +1,10 @@
 default_view:
   name: Haus
-  view: true
+  view: Yes
   entities:
     - group.living_room
     - group.people
+    - group.network
 
 living_room:
   name: Wohnzimmer
@@ -17,8 +18,13 @@ living_room:
 people:
   name: Personen
   entities:
-#    - device_tracker.desert_lime
-    - group.desert_lime
+    - device_tracker.desert_lime
+
+network:
+  name: Netzwerk
+  entities:
+    - switch.lemon
+    - sensor.fritz_external_ipv4
 
 desert_lime:
   name: Andreas (iPhone)

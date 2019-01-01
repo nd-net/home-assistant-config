@@ -108,6 +108,8 @@ device_tracker.desert_lime:
   group:
     group.desert_lime:
       friendly_name: Ort
+    group.people:
+      friendly_name: Andreas
 sensor.desert_lime_battery_level:
   friendly_name: Desert Lime Batterie
   group:

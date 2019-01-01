@@ -62,12 +62,15 @@ sun:
 # Sensors
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
+switch: !include switches.yaml
 
 # Text to speech
 tts:
   - platform: google
 
 notify:
+
+wake_on_lan:
 
 # Cloud
 cloud:
