@@ -1,25 +1,10 @@
-# default_view:
-#   view: true
-#   icon: mdi:home
-#   entities:
-#     - group.living_room
-
-weather:
-  name: Wetter
-  control: hidden
+default_view:
+  name: Haus
+  view: true
   entities:
-    - sun.sun
-    - sensor.moon
-    - sensor.hoersching_temperature
-    - sensor.hoersching_humidity
-    - sensor.hoersching_pressure
-    - sensor.hoersching_wind_speed
-    - sensor.hoersching_wind_bearing
-    - sensor.hoersching_wind_max_speed
-    - sensor.hoersching_sun_last_hour
-    - sensor.hoersching_precipitation
-    - sensor.hoersching_dewpoint
-    
+    - group.living_room
+    - group.people
+
 living_room:
   name: Wohnzimmer
   control: hidden
@@ -28,6 +13,61 @@ living_room:
     - sensor.aeotec_dsb05_multisensor_luminance
     - sensor.aeotec_dsb05_multisensor_relative_humidity
     - sensor.aeotec_dsb05_multisensor_temperature
+
+people:
+  name: Personen
+  entities:
+#    - device_tracker.desert_lime
+    - group.desert_lime
+
+desert_lime:
+  name: Andreas (iPhone)
+  icon: mdi:cellphone
+  entities:
+    - device_tracker.desert_lime
+    - sensor.desert_lime_battery_level
+    - sensor.desert_lime_battery_state
+
+# Garden View
+
+garden:
+  name: Garten
+  view: Yes
+  entities:
+    - group.weather
+  
+
+weather:
+  name: Wetter
+  control: hidden
+  icon: mdi:weather-partlycloudy
+  entities:
+    - sun.sun
+    - sensor.moon
+    - sensor.hoersching_temperature
+    - sensor.hoersching_humidity
+    - sensor.hoersching_pressure
+    - sensor.hoersching_wind_speed
+    - sensor.hoersching_wind_max_speed
+    - sensor.hoersching_wind_bearing
+    - sensor.hoersching_sun_last_hour
+    - sensor.hoersching_precipitation
+    - sensor.hoersching_dewpoint
+
+# More View
+
+info:
+  name: Info
+  view: Yes
+  icon: mdi:information
+  entities:
+    - group.internet
+    - group.phone
+    - group.zwave
+    - group.desert_lime
+    - weblink.home_assistant
+    - group.all_automations
+    - group.all_devices
 
 internet:
   name: Internet
@@ -39,10 +79,11 @@ internet:
     - sensor.fritz_max_byte_rate_down
     - sensor.fritz_transmission_rate_up
     - sensor.fritz_transmission_rate_down
+    - weblink.router
 
-automation_view:
-  name: Automation
-  view: true
+zwave:
+  name: Z-Wave
   entities:
-    - group.all_automations
-    - group.all_scripts
+    - zwave.aeotec_dsb05_multisensor
+    - zwave.zwaveme_razberry_controller
+  
