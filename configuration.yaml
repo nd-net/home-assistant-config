@@ -19,6 +19,10 @@ homeassistant:
 # Enables the frontend
 frontend:
 
+# Adding the custom UI elements from https://github.com/andrey-git/home-assistant-custom-ui
+customizer:
+  custom_ui: local
+
 # Enables configuration UI
 config:
 

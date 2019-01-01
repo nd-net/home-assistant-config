@@ -3,6 +3,7 @@
 !*.yaml
 !.gitignore
 !*.md
+!update.sh
 
 # Ignore folders.
 .storage
