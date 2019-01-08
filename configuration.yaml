@@ -43,19 +43,14 @@ config:
 # Discover some devices automatically
 discovery:
 
-# Enables a map showing the location of tracked devices
-map:
-
-notify:
-
 http:
   api_password: !secret api_password
   ip_ban_enabled: Yes
   login_attempts_threshold: 5
 
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+python_script:
 weblink:
   entities: !include weblinks.yaml

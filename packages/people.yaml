@@ -1,0 +1,16 @@
+# Enables a map showing the location of tracked devices
+map:
+
+notify:
+  - name: nd
+    platform: group
+    services:
+      - service: ios_bergamot
+      - service: ios_desert_lime
+
+group:
+  people:
+    name: Personen
+    icon: mdi:account
+    entities:
+      - device_tracker.desert_lime
