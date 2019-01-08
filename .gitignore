@@ -1,19 +1,23 @@
-*
-
-!*.yaml
-!.gitignore
-!*.md
-!update.sh
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
 
 # Ignore folders.
 .storage
 .cloud
 .google.token
+deps
+__pycache__
 
 # Ignore Mac SMB files
 ._*
+# Ignore hidden files
+.*
 
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
-ip_bans.yaml
-secrets.yaml
-known_devices.yaml
+# Ignore database and log files
+home-assistant_v2.db
+home-assistant.log
+*.sqlite
+OZW_Log.txt
+
