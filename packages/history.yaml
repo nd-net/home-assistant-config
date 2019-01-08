@@ -1,9 +1,37 @@
-
 # Enables support for tracking state changes over time
 recorder:
-  purge_keep_days: 60
+  db_url: !secret recorder_db_url
+  exclude: &exclude_recorder
+    domains:
+      - automation
+      - weblink
+      - updater
+    entities:
+      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+      - sensor.date
+      - sun.sun # Don't record external weather data
+      - sensor.moon
+      - sensor.hoersching_temperature
+      - sensor.hoersching_humidity
+      - sensor.hoersching_pressure
+      - sensor.hoersching_wind_speed
+      - sensor.hoersching_wind_max_speed
+      - sensor.hoersching_wind_bearing
+      - sensor.hoersching_sun_last_hour
+      - sensor.hoersching_precipitation
+      - sensor.hoersching_dewpoint
 
 history:
 
 # View all events in a logbook
 logbook:
+  
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: !secret influxdb_password
+  max_retries: 3
+  default_measurement: state
+  exclude: *exclude_recorder
