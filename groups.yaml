@@ -8,6 +8,7 @@ default_view:
 
 living_room:
   name: Wohnzimmer
+  icon: mdi:sofa
   control: hidden
   entities:
     - binary_sensor.aeotec_dsb05_multisensor_sensor
@@ -17,11 +18,13 @@ living_room:
 
 people:
   name: Personen
+  icon: mdi:account
   entities:
     - device_tracker.desert_lime
 
 network:
   name: Netzwerk
+  icon: mdi:server-network
   entities:
     - switch.lemon
     - sensor.fritz_external_ipv4
@@ -40,8 +43,14 @@ garden:
   name: Garten
   view: Yes
   entities:
+    - group.garden_automation
     - group.weather
-  
+
+garden_automation:
+  name: Garten
+  icon: mdi:tree
+  entities:
+    - vacuum.winnie
 
 weather:
   name: Wetter
@@ -77,6 +86,7 @@ info:
 
 internet:
   name: Internet
+  icon: mdi:network
   entities:
     - sensor.fritz_netmonitor
     - binary_sensor.fritz_is_connected
@@ -89,6 +99,7 @@ internet:
 
 zwave:
   name: Z-Wave
+  icon: mdi:z-wave
   entities:
     - zwave.aeotec_dsb05_multisensor
     - zwave.zwaveme_razberry_controller

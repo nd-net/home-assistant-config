@@ -1,7 +1,7 @@
 group.all_automations:
-  hidden: No
+  icon: mdi:settings-box
 group.all_scripts:
-  hidden: No
+  hidden: false
 sensor.aeotec_dsb05_multisensor_luminance:
   device_class: illuminance
   friendly_name: Wohnzimmer Helligkeit
@@ -86,7 +86,7 @@ binary_sensor.fritz_is_connected:
   friendly_name: Online
 sensor.fritz_external_ipv4:
   friendly_name: IPv4
-  icon: mdi:battlenet
+  icon: mdi:ip-network
 sensor.fritz_max_byte_rate_up:
   friendly_name: Bandbreite Upload
   icon: mdi:upload-network
@@ -120,3 +120,11 @@ sensor.desert_lime_battery_state:
   group:
     group.desert_lime:
       friendly_name: Strom
+group.all_devices:
+  icon: mdi:thermostat-box
+group.all_switches:
+  icon: mdi:lightbulb-outline
+switch.lemon:
+  icon: mdi:desktop-tower
+vacuum.winnie:
+  icon: mdi:flower-outline
