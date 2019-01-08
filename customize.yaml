@@ -6,5 +6,3 @@ group.all_devices:
   icon: mdi:thermostat-box
 group.all_switches:
   icon: mdi:lightbulb-outline
-vacuum.winnie:
-  icon: mdi:flower-outline

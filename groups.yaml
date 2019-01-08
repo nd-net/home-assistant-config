@@ -31,12 +31,6 @@ garden:
     - group.garden_automation
     - group.weather
 
-garden_automation:
-  name: Garten
-  icon: mdi:tree
-  entities:
-    - vacuum.winnie
-
 # More View
 
 info:

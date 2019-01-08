@@ -1,0 +1,15 @@
+gardena:
+  username: !secret gardena_username
+  password: !secret gardena_password
+
+group:
+  garden_automation:
+    name: Garten
+    icon: mdi:tree
+    entities:
+      - vacuum.winnie
+
+homeassistant:
+  customize:
+    vacuum.winnie:
+      icon: mdi:flower-outline
