@@ -1,0 +1,25 @@
+homekit:
+  # Disable autostart because of Z-Wave discovery
+  auto_start: No
+  filter:
+    include_entities:
+      - binary_sensor.aeotec_dsb05_multisensor_sensor
+      - sensor.aeotec_dsb05_multisensor_luminance
+      - sensor.aeotec_dsb05_multisensor_relative_humidity
+      - sensor.aeotec_dsb05_multisensor_temperature
+    
+      - binary_sensor.fritz_is_connected
+
+automation:
+  # Start HomeKit once Z-Wave is ready
+  - alias: Start HomeKit
+    id: 28e1b173fa914f1399ea78916375bddb
+    trigger:
+    - platform: event
+      event_type: zwave.network_ready
+    - platform: event
+      event_type: zwave.network_complete
+    - platform: event
+      event_type: zwave.network_complete_some_dead
+    action:
+    - service: homekit.start
