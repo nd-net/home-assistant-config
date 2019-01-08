@@ -16,8 +16,12 @@ __pycache__
 .*
 
 # Ignore database and log files
-home-assistant_v2.db
+home-assistant_v2.db*
 home-assistant.log
 *.sqlite
 OZW_Log.txt
 
+# Ignore Z-Wave XML files
+zwcfg_*.xml
+zwscene.xml
+options.xml
