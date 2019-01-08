@@ -83,9 +83,6 @@ http:
 
 ios:
 
-# Z-Wave is configured using "Integrations"
-zwave:
-  usb_path: /dev/ttyUSB0
 
 group: !include groups.yaml
 automation: !include automations.yaml
