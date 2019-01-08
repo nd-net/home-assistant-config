@@ -14,6 +14,7 @@ homeassistant:
   customize_glob:
     "*.*":
       custom_ui_state_card: state-card-custom-ui
+      show_last_changed: true
   customize: !include customize.yaml
   packages: !include_dir_named packages
 
@@ -42,29 +43,10 @@ config:
 # Discover some devices automatically
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time
-recorder:
-  purge_keep_days: 60
-
-history:
-
-# View all events in a logbook
-logbook:
-
 # Enables a map showing the location of tracked devices
 map:
 
-# Text to speech
-tts:
-  - platform: google
-
 notify:
-
-# Cloud
-cloud:
 
 http:
   api_password: !secret api_password
