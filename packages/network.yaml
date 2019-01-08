@@ -1,0 +1,80 @@
+wake_on_lan:
+
+sensor:
+  # Get network statistics from the Friz!Box
+  - platform: fritzbox_netmonitor
+
+  - platform: template
+    sensors:
+      fritz_external_ipv4:
+        friendly_name: IPv4
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'external_ip') }}"
+      fritz_max_byte_rate_up:
+        friendly_name: Bandbreite Upload
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'max_byte_rate_up')|float / 1000000 * 8 }}"
+        unit_of_measurement: MBit/s
+      fritz_max_byte_rate_down:
+        friendly_name: Bandbreite Download
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'max_byte_rate_down')|float / 1000000 * 8 }}"
+        unit_of_measurement: MBit/s
+      fritz_transmission_rate_up:
+        friendly_name: Upload
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'transmission_rate_up')|float / 1000000 * 8 }}"
+        unit_of_measurement: MBit/s
+      fritz_transmission_rate_down:
+        friendly_name: Download
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'transmission_rate_down')|float / 1000000 * 8 }}"
+        unit_of_measurement: MBit/s
+
+binary_sensor:
+  - platform: template
+    sensors:
+      fritz_is_connected:
+        friendly_name: Online
+        value_template: "{{ state_attr('sensor.fritz_netmonitor', 'is_connected') }}"
+
+switch:
+  - platform: wake_on_lan
+    name: Lemon
+    mac_address: "00:23:df:de:71:c1"
+    host: "192.168.0.16"
+    #turn_off: ???
+
+weblink:
+  entities:
+    - name: Router
+      url: http://192.168.0.254/
+
+group:
+  network:
+    name: Netzwerk
+    entities:
+      - switch.lemon
+      - sensor.fritz_external_ipv4
+
+  internet:
+    name: Internet
+    entities:
+      - sensor.fritz_netmonitor
+      - binary_sensor.fritz_is_connected
+      - sensor.fritz_external_ipv4
+      - sensor.fritz_max_byte_rate_up
+      - sensor.fritz_max_byte_rate_down
+      - sensor.fritz_transmission_rate_up
+      - sensor.fritz_transmission_rate_down
+      - weblink.router
+
+homeassistant:
+  customize:
+    sensor.fritz_netmonitor:
+      friendly_name: Internet
+    sensor.fritz_external_ipv4:
+      icon: mdi:battlenet
+    sensor.fritz_max_byte_rate_up:
+      icon: mdi:upload-network
+    sensor.fritz_max_byte_rate_down:
+      icon: mdi:download-network
+    sensor.fritz_transmission_rate_up:
+      icon: mdi:upload
+    sensor.fritz_transmission_rate_down:
+      icon: mdi:download

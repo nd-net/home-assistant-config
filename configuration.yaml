@@ -15,6 +15,7 @@ homeassistant:
     "*.*":
       custom_ui_state_card: state-card-custom-ui
   customize: !include customize.yaml
+  packages: !include_dir_named packages
 
 # Adding the custom UI elements from https://github.com/andrey-git/home-assistant-custom-ui
 customizer:
@@ -41,9 +42,6 @@ config:
 # Discover some devices automatically
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 # Enables support for tracking state changes over time
 recorder:
   purge_keep_days: 60
@@ -56,37 +54,17 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-# Track the sun
-sun:
-
 # Sensors
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
 switch: !include switches.yaml
 
-# Text to speech
-tts:
-  - platform: google
-
 notify:
-
-wake_on_lan:
-
-# Cloud
-cloud:
 
 http:
   api_password: !secret api_password
   ip_ban_enabled: Yes
   login_attempts_threshold: 5
-
-ios:
-
-homekit: !include homekit.yaml
-
-# Z-Wave is configured using "Integrations"
-zwave:
-  usb_path: /dev/ttyUSB0
 
 group: !include groups.yaml
 automation: !include automations.yaml

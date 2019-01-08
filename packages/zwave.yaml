@@ -1,0 +1,37 @@
+# Z-Wave is configured using "Integrations"
+zwave:
+  usb_path: /dev/ttyUSB0
+
+group:
+  zwave:
+    name: Z-Wave
+    entities:
+      - zwave.aeotec_dsb05_multisensor
+      - zwave.zwaveme_razberry_controller
+
+homeassistant:
+  customize:
+    sensor.aeotec_dsb05_multisensor_luminance:
+      device_class: illuminance
+      friendly_name: Wohnzimmer Helligkeit
+      group:
+        group.living_room:
+          friendly_name: Helligkeit
+    sensor.aeotec_dsb05_multisensor_relative_humidity:
+      device_class: humidity
+      friendly_name: Wohnzimmer Luftfeuchtigkeit
+      group:
+        group.living_room:
+          friendly_name: Luftfeuchtigkeit
+    sensor.aeotec_dsb05_multisensor_temperature:
+      device_class: temperature
+      friendly_name: Wohnzimmer Temperatur
+      group:
+        group.living_room:
+          friendly_name: Temperatur
+    binary_sensor.aeotec_dsb05_multisensor_sensor:
+      device_class: occupancy
+      friendly_name: Wohnzimmer Anwesenheit
+      group:
+        group.living_room:
+          friendly_name: Anwesenheit

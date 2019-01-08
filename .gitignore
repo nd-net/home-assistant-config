@@ -4,6 +4,7 @@
 !.gitignore
 !*.md
 !update.sh
+!packages
 
 # Ignore folders.
 .storage

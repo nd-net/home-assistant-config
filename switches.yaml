@@ -1,5 +1,0 @@
-- platform: wake_on_lan
-  name: Lemon
-  mac_address: "00:23:df:de:71:c1"
-  host: "192.168.0.16"
-  #turn_off: ???

@@ -1,4 +1,0 @@
-- platform: template
-  sensors:
-    fritz_is_connected:
-      value_template: "{{ state_attr('sensor.fritz_netmonitor', 'is_connected') }}"

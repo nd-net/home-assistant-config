@@ -1,0 +1,30 @@
+ios:
+
+group:
+  desert_lime:
+    name: Andreas (iPhone)
+    icon: mdi:cellphone
+    entities:
+      - device_tracker.desert_lime
+      - sensor.desert_lime_battery_level
+      - sensor.desert_lime_battery_state
+
+homeassistant:
+  customize:
+    device_tracker.desert_lime:
+      friendly_name: Desert Lime Ort
+      group:
+        group.desert_lime:
+          friendly_name: Ort
+        group.people:
+          friendly_name: Andreas
+    sensor.desert_lime_battery_level:
+      friendly_name: Desert Lime Batterie
+      group:
+        group.desert_lime:
+          friendly_name: Batterie
+    sensor.desert_lime_battery_state:
+      friendly_name: Desert Lime Strom
+      group:
+        group.desert_lime:
+          friendly_name: Strom
