@@ -2,60 +2,6 @@ group.all_automations:
   icon: mdi:settings-box
 group.all_scripts:
   hidden: false
-sensor.hoersching_temperature:
-  device_class: temperature
-  friendly_name: Hörsching Temperatur
-  group:
-    group.weather:
-      friendly_name: Temperatur
-sensor.hoersching_humidity:
-  friendly_name: Hörsching Luftfeuchtigkeit
-  icon: mdi:water-percent
-  group:
-    group.weather:
-      friendly_name: Luftfeuchtigkeit
-sensor.hoersching_pressure:
-  friendly_name: Hörsching Luftdruck
-  icon: mdi:gauge
-  group:
-    group.weather:
-      friendly_name: Luftdruck
-sensor.hoersching_wind_speed:
-  friendly_name: Hörsching Windgeschwindigkeit
-  icon: mdi:weather-windy-variant
-  group:
-    group.weather:
-      friendly_name: Windgeschwindigkeit
-sensor.hoersching_wind_bearing:
-  friendly_name: Hörsching Windrichtung
-  icon: mdi:compass-outline
-  group:
-    group.weather:
-      friendly_name: Windrichtung
-sensor.hoersching_wind_max_speed:
-  friendly_name: Hörsching Maximale Windgeschwindigkeit
-  icon: mdi:weather-windy
-  group:
-    group.weather:
-      friendly_name: Maximale Windgeschwindigkeit
-sensor.hoersching_sun_last_hour:
-  friendly_name: Hörsching Sonnenschein
-  icon: mdi:weather-partlycloudy
-  group:
-    group.weather:
-      friendly_name: Sonnenschein
-sensor.hoersching_precipitation:
-  friendly_name: Hörsching Niederschlag
-  icon: mdi:weather-snowy-rainy
-  unit_of_measurement: mm
-  group:
-    group.weather:
-      friendly_name: Niederschlag
-sensor.hoersching_dewpoint:
-  friendly_name: Hörsching Taupunkt
-  group:
-    group.weather:
-      friendly_name: Taupunkt
 sensor.fritz_netmonitor:
   friendly_name: Internet
 binary_sensor.fritz_is_connected:
@@ -75,10 +21,6 @@ sensor.fritz_transmission_rate_up:
 sensor.fritz_transmission_rate_down:
   friendly_name: Download
   icon: mdi:download
-sensor.moon:
-  friendly_name: Mond
-sun.sun:
-  friendly_name: Sonne
 device_tracker.desert_lime:
   friendly_name: Desert Lime Ort
   group:

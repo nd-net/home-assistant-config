@@ -52,23 +52,6 @@ garden_automation:
   entities:
     - vacuum.winnie
 
-weather:
-  name: Wetter
-  control: hidden
-  icon: mdi:weather-partlycloudy
-  entities:
-    - sun.sun
-    - sensor.moon
-    - sensor.hoersching_temperature
-    - sensor.hoersching_humidity
-    - sensor.hoersching_pressure
-    - sensor.hoersching_wind_speed
-    - sensor.hoersching_wind_max_speed
-    - sensor.hoersching_wind_bearing
-    - sensor.hoersching_sun_last_hour
-    - sensor.hoersching_precipitation
-    - sensor.hoersching_dewpoint
-
 # More View
 
 info:

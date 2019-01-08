@@ -57,9 +57,6 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-# Track the sun
-sun:
-
 # Sensors
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
