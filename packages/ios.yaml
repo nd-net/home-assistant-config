@@ -8,6 +8,13 @@ group:
       - device_tracker.desert_lime
       - sensor.desert_lime_battery_level
       - sensor.desert_lime_battery_state
+  bergamot:
+    name: Andreas (iPad)
+    icon: mdi:tablet-ipad
+    entities:
+      - device_tracker.bergamot
+      - sensor.bergamot_battery_level
+      - sensor.bergamot_battery_state
 
 homeassistant:
   customize:
@@ -27,4 +34,19 @@ homeassistant:
       friendly_name: Desert Lime Strom
       group:
         group.desert_lime:
+          friendly_name: Strom
+    device_tracker.bergamot:
+      friendly_name: Bergamot Ort
+      group:
+        group.bergamot:
+          friendly_name: Ort
+    sensor.bergamot_battery_level:
+      friendly_name: Bergamot Batterie
+      group:
+        group.bergamot:
+          friendly_name: Batterie
+    sensor.bergamot_battery_state:
+      friendly_name: Bergamot Strom
+      group:
+        group.bergamot:
           friendly_name: Strom

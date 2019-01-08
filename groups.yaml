@@ -36,6 +36,7 @@ info:
     - group.phone
     - group.zwave
     - group.desert_lime
+    - group.bergamot
     - weblink.home_assistant
     - group.all_automations
     - group.all_devices
