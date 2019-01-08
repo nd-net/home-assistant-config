@@ -1,5 +1,2 @@
-- name: Router
-  icon: mdi:switch
-  url: http://192.168.0.254/
 - name: Home Assistant
   url: https://www.home-assistant.io

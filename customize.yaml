@@ -2,25 +2,6 @@ group.all_automations:
   icon: mdi:settings-box
 group.all_scripts:
   hidden: false
-sensor.fritz_netmonitor:
-  friendly_name: Internet
-binary_sensor.fritz_is_connected:
-  friendly_name: Online
-sensor.fritz_external_ipv4:
-  friendly_name: IPv4
-  icon: mdi:ip-network
-sensor.fritz_max_byte_rate_up:
-  friendly_name: Bandbreite Upload
-  icon: mdi:upload-network
-sensor.fritz_max_byte_rate_down:
-  friendly_name: Bandbreite Download
-  icon: mdi:download-network
-sensor.fritz_transmission_rate_up:
-  friendly_name: Upload
-  icon: mdi:upload
-sensor.fritz_transmission_rate_down:
-  friendly_name: Download
-  icon: mdi:download
 device_tracker.desert_lime:
   friendly_name: Desert Lime Ort
   group:

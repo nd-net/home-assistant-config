@@ -22,13 +22,6 @@ people:
   entities:
     - device_tracker.desert_lime
 
-network:
-  name: Netzwerk
-  icon: mdi:server-network
-  entities:
-    - switch.lemon
-    - sensor.fritz_external_ipv4
-
 desert_lime:
   name: Andreas (iPhone)
   icon: mdi:cellphone
@@ -66,16 +59,3 @@ info:
     - weblink.home_assistant
     - group.all_automations
     - group.all_devices
-
-internet:
-  name: Internet
-  icon: mdi:network
-  entities:
-    - sensor.fritz_netmonitor
-    - binary_sensor.fritz_is_connected
-    - sensor.fritz_external_ipv4
-    - sensor.fritz_max_byte_rate_up
-    - sensor.fritz_max_byte_rate_down
-    - sensor.fritz_transmission_rate_up
-    - sensor.fritz_transmission_rate_down
-    - weblink.router
