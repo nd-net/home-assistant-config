@@ -71,8 +71,6 @@ http:
   ip_ban_enabled: Yes
   login_attempts_threshold: 5
 
-ios:
-
 
 group: !include groups.yaml
 automation: !include automations.yaml

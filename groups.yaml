@@ -22,14 +22,6 @@ people:
   entities:
     - device_tracker.desert_lime
 
-desert_lime:
-  name: Andreas (iPhone)
-  icon: mdi:cellphone
-  entities:
-    - device_tracker.desert_lime
-    - sensor.desert_lime_battery_level
-    - sensor.desert_lime_battery_state
-
 # Garden View
 
 garden:

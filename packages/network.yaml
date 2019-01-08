@@ -88,3 +88,5 @@ homeassistant:
     sensor.fritz_transmission_rate_down:
       friendly_name: Download
       icon: mdi:download
+    switch.lemon:
+      icon: mdi:desktop-tower
